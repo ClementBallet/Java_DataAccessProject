@@ -1,0 +1,17 @@
+body{
+	background-color: whitesmoke; 
+	color: grey; 
+	text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid black;
+    margin: auto;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 15px 2px;   
+}

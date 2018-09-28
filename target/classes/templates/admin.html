@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+	  	<meta charset="utf-8">
+	  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0" />
+		<meta name="description" content="The Dap trainning project admin" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="dap" />
+		
+		<title th:text="#{app.title}"></title>
+		
+	  	<link rel="stylesheet" type="text/css" th:href="@{css/dap.css}">
+	  	<script src="script.js"></script>
+	</head>
+	<body>
+	  <h1>List Credentials</h1>
+	  <table>
+	  	<thead>
+	  		<tr>
+	  			<th>User Key</th>
+	  			<th>Access Token</th>
+	  			<th>Refresh Token</th>
+	  			<th>Expiration (ms)</th>
+	  		</tr>
+	  	</thead>
+	  	<tbody>
+	  		<tr th:each="userKey : ${credentials}">
+	  			<td th:text="${userKey.key}"></td>
+	  			<td th:text="${userKey.value.accessToken}"></td>
+	  			<td th:text="${userKey.value.refreshToken}"></td>
+	  			<td th:text="${userKey.value.expirationTimeMilliseconds}"></td>
+	  		</tr>
+	  	</tbody>
+	  </table>
+	</body>
+</html>
